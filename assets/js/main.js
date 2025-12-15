@@ -594,7 +594,7 @@
             title: '李世权 · 李丹丹 的婚礼请柬',
             desc: '诚邀您见证我们的幸福时刻',
             link: window.location.href,
-            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/main.jpg'
+            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/cover.jpg'
           });
         });
         
@@ -603,7 +603,7 @@
             title: '李世权 · 李丹丹 的婚礼请柬',
             desc: '诚邀您见证我们的幸福时刻',
             link: window.location.href,
-            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/main.jpg'
+            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/cover.jpg'
           });
         });
       });
