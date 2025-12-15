@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff8aa1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  
+  <!-- 微信分享配置 -->
+  <meta property="og:title" content="李世权 · 李丹丹 的婚礼请柬" />
+  <meta property="og:description" content="诚邀您见证我们的幸福时刻" />
+  <meta property="og:image" content="/assets/img/main.jpg" />
+  <meta property="og:url" content="/" />
+  <meta name="description" content="李世权 · 李丹丹 的婚礼请柬，诚邀您见证我们的幸福时刻" />
+  <meta name="keywords" content="婚礼请柬,电子请柬,婚礼邀请" />
+  
+  <title>我们的婚礼请柬</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <audio id="bgm" src="assets/img/bgm.mp3" preload="auto" loop></audio>
+  <div class="audio-toggle" id="audioToggle" aria-label="音乐开关" role="button" tabindex="0"></div>
+  
+  <!-- 浮动爱心背景 -->
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <header class="hero" id="hero">
+    <div class="slider">
+      <div class="slide active" style="background-image: url('assets/img/main.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/img/slideshow/slideshow_01.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/img/slideshow/slideshow_02.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/img/slideshow/slideshow_03.jpeg')"></div>
+      <div class="slide" style="background-image: url('assets/img/slideshow/slideshow_04.jpeg')"></div>
+      <div class="slide" style="background-image: url('assets/img/slideshow/slideshow_05.jpg')"></div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-arrow prev" aria-label="上一张">❮</button>
+      <div class="slider-dots"></div>
+      <button class="slider-arrow next" aria-label="下一张">❯</button>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="petals" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">我们结婚啦</h1>
+      <p class="hero__names">李世权 · 李丹丹</p>
+      <p class="hero__subtitle">诚邀您见证我们的幸福时刻</p>
+      <div class="countdown" id="countdown">
+        <div class="cd-item"><span id="cd-days">00</span><label>天</label></div>
+        <div class="cd-item"><span id="cd-hours">00</span><label>时</label></div>
+        <div class="cd-item"><span id="cd-minutes">00</span><label>分</label></div>
+        <div class="cd-item"><span id="cd-seconds">00</span><label>秒</label></div>
+      </div>
+      <a href="#details" class="btn btn-primary hero__cta">查看详情</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="details">
+      <h2 class="section__title">婚礼信息</h2>
+      <ul class="info-list">
+        <li><strong>新郎</strong>：李世权</li>
+        <li><strong>新娘</strong>：李丹丹</li>
+        <li><strong>日期</strong>：<span id="weddingDateText">2025-12-29 11:00:00</span></li>
+        <li><strong>地点</strong>：<span id="weddingAddressText">安徽省亳州市利辛县全顺大酒店二楼陨石厅</span></li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn" id="addCalendarBtn">添加到日历</button>
+        <button class="btn" id="openMapBtn">打开地图</button>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <h2 class="section__title">婚礼日程</h2>
+      <div class="timeline">
+        <div class="timeline__item animate-on-scroll">
+          <div class="time">10:30</div>
+          <div class="dot"></div>
+          <div class="desc">
+            <h3>嘉宾签到</h3>
+            <p>请于10:30前到达酒店签到</p>
+          </div>
+        </div>
+        <div class="timeline__item animate-on-scroll">
+          <div class="time">11:58</div>
+          <div class="dot"></div>
+          <div class="desc">
+            <h3>婚礼仪式</h3>
+            <p>爱的誓言与交换戒指</p>
+          </div>
+        </div>
+        <div class="timeline__item animate-on-scroll">
+          <div class="time">12:30</div>
+          <div class="dot"></div>
+          <div class="desc">
+            <h3>婚宴开始</h3>
+            <p>享用美食，共同举杯</p>
+          </div>
+        </div>
+        <div class="timeline__item animate-on-scroll">
+          <div class="time">14:00</div>
+          <div class="dot"></div>
+          <div class="desc">
+            <h3>互动环节</h3>
+            <p>游戏与抽奖</p>
+          </div>
+        </div>
+        <div class="timeline__item animate-on-scroll">
+          <div class="time">15:30</div>
+          <div class="dot"></div>
+          <div class="desc">
+            <h3>婚礼结束</h3>
+            <p>感谢您的光临</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <h2 class="section__title">我们的照片</h2>
+      <div class="grid">
+        <img src="assets/img/slideshow/slideshow_01.jpg" alt="合影 1" class="grid__item" />
+        <img src="assets/img/slideshow/slideshow_02.jpg" alt="合影 2" class="grid__item" />
+        <img src="assets/img/slideshow/slideshow_03.jpeg" alt="合影 3" class="grid__item" />
+        <img src="assets/img/slideshow/slideshow_04.jpeg" alt="合影 4" class="grid__item" />
+        <img src="assets/img/slideshow/slideshow_05.jpg" alt="合影 5" class="grid__item" />
+      </div>
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="关闭预览">×</button>
+        <img class="lightbox__img" id="lightboxImg" alt="预览" />
+      </div>
+    </section>
+
+    <section class="section" id="rsvp">
+      <h2 class="section__title">出席回执 RSVP</h2>
+      <form id="rsvpForm" novalidate>
+        <div class="form-row">
+          <label>姓名</label>
+          <input type="text" id="guestName" placeholder="请输入您的姓名" required />
+        </div>
+        <div class="form-row">
+          <label>人数</label>
+          <input type="number" id="guestCount" min="1" max="10" step="1" value="1" required />
+        </div>
+        <div class="form-row">
+          <label>手机</label>
+          <input type="tel" id="guestPhone" placeholder="请输入手机号" required />
+        </div>
+        <div class="form-row">
+          <label>留言（选填）</label>
+          <textarea id="guestNote" rows="3" placeholder="给我们留一句祝福吧"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">提交回执</button>
+        <p class="form-tip" id="rsvpTip"></p>
+      </form>
+    </section>
+
+    <!-- 新增：宾客留言板 -->
+    <section class="section" id="guestbook">
+      <h2 class="section__title">宾客留言板</h2>
+      <div class="guestbook-controls">
+<!--        <button class="btn btn-small" id="pauseScrollBtn" onclick="toggleScroll()">⏸️ 暂停滚动</button>-->
+<!--        <button class="btn btn-small" id="addTestMessageBtn" onclick="addTestMessage()">➕ 添加测试留言</button>-->
+      </div>
+      <div class="guestbook-container">
+        <div class="guestbook-messages" id="guestbookMessages">
+          <!-- 预设祝福语 -->
+          <div class="guest-message" data-message-id="1">
+            <div class="guest-name">幸福天使</div>
+            <div class="guest-text">愿你们的爱情如蜜般甜蜜，如花般美丽！</div>
+          </div>
+          <div class="guest-message" data-message-id="2">
+            <div class="guest-name">爱的见证者</div>
+            <div class="guest-text">祝福你们白头偕老，永结同心！</div>
+          </div>
+          <div class="guest-message" data-message-id="3">
+            <div class="guest-name">美好祝福者</div>
+            <div class="guest-text">愿你们的婚姻生活充满欢乐与温馨！</div>
+          </div>
+          <div class="guest-message" data-message-id="4">
+            <div class="guest-name">温馨朋友</div>
+            <div class="guest-text">愿你们的爱情故事成为最美的传说！</div>
+          </div>
+          <div class="guest-message" data-message-id="5">
+            <div class="guest-name">快乐伙伴</div>
+            <div class="guest-text">祝福你们携手走过人生的每一个春夏秋冬！</div>
+          </div>
+          <div class="guest-message" data-message-id="6">
+            <div class="guest-name">爱的守护者</div>
+            <div class="guest-text">愿你们的婚姻像花儿一样美丽绽放！</div>
+          </div>
+          <div class="guest-message" data-message-id="7">
+            <div class="guest-name">浪漫使者</div>
+            <div class="guest-text">愿你们的爱情如诗如画，如歌如梦！</div>
+          </div>
+          <div class="guest-message" data-message-id="8">
+            <div class="guest-name">幸福守护者</div>
+            <div class="guest-text">祝福你们在爱的海洋中永远幸福！</div>
+          </div>
+          <div class="guest-message" data-message-id="9">
+            <div class="guest-name">美好祝愿者</div>
+            <div class="guest-text">愿你们的婚姻生活如春天般温暖！</div>
+          </div>
+          <div class="guest-message" data-message-id="10">
+            <div class="guest-name">爱的传递者</div>
+            <div class="guest-text">愿你们的爱情故事感动每一个人！</div>
+          </div>
+          <div class="guest-message" data-message-id="11">
+            <div class="guest-name">温馨守护者</div>
+            <div class="guest-text">祝福你们在爱的道路上越走越远！</div>
+          </div>
+          <div class="guest-message" data-message-id="12">
+            <div class="guest-name">幸福传递者</div>
+            <div class="guest-text">愿你们的爱情如阳光般温暖人心！</div>
+          </div>
+        </div>
+        <div class="guestbook-form">
+          <input type="text" id="newMessage" placeholder="写下您的祝福..." maxlength="100" />
+          <button class="btn btn-primary" onclick="addGuestMessage()">发送祝福</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="thanks">
+      <h2 class="section__title">谢谢您的回复</h2>
+      <p style="text-align:center;color:#777">您的信息已记录到云端表格，我们期待与您相见！</p>
+    </section>
+
+    <section class="section" id="share">
+      <h2 class="section__title">分享请柬</h2>
+      <div class="share-box">
+        <input id="inviteUrl" type="text" class="input" />
+        <button id="copyBtn" class="btn">复制链接</button>
+      </div>
+      <div class="qr-box">
+        <img id="qrImg" alt="二维码" />
+      </div>
+      <p class="muted">可将链接/二维码发送给亲友或在微信中转发</p>
+      <div class="cta-row">
+<!--        <button id="exportCsvBtn" class="btn">导出本地回执 CSV</button>-->
+<!--        <button id="openSheetBtn" class="btn">打开云端表格</button>-->
+      </div>
+    </section>
+
+    <!-- 统计区块已隐藏，应你的要求不再展示 -->
+  </main>
+
+  <footer class="footer">
+    <p>期待您的到来！</p>
+<!--    <p class="ref">参考模板：<a href="https://h5.hunbei.com/view/A1609a50951ea" target="_blank" rel="noopener">婚贝请柬</a></p>-->
+  </footer>
+
+  <script>
+    // 轮播图配置
+    const SLIDER_CONFIG = {
+      autoplay: true,
+      autoplaySpeed: 5000,
+      showArrows: true,
+      showDots: true,
+      transitionSpeed: 800
+    };
+    
+    // 婚礼配置
+    window.WEDDING_CONFIG = {
+      weddingDate: '2025-12-29 11:00:00',
+      addressText: '安徽省亳州市利辛县全顺大酒店二楼陨石厅',
+      mapSearchKeyword: '亳州 利辛 全顺大酒 二楼陨石厅',
+      // 在线表单端点（例如 Formspree: https://formspree.io/f/xxxx 或你的后端 API）。
+      // 留空则仅使用本地存储。
+      formEndpoint: 'https://script.google.com/macros/s/AKfycbwjVqzI3RUo39xwC3G6_WqqAFUEJ_zH7MqUPOPju1p1qYIKbOGT5wNiTWteKRF383T9/exec',
+      sheetUrl: 'https://docs.google.com/spreadsheets/d/16cxiYq6uPrkOHkB2l_g_1ZB7LsPQ_14tfr_2IkXfeLU/edit#gid=0',
+    };
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // 设置目标时间：2025-12-29 11:00:00（注意使用 ISO 格式，避免时区问题）
+    const targetDate = new Date('2025-12-29T11:00:00+08:00'); // 中国标准时间 UTC+8
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        // 倒计时结束
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-minutes').textContent = '00';
+        document.getElementById('cd-seconds').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    // 立即执行一次
+    updateCountdown();
+    // 每秒更新
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
