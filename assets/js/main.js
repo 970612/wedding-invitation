@@ -591,19 +591,19 @@
       document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         WeixinJSBridge.on('menu:share:appmessage', function (argv) {
           WeixinJSBridge.invoke('shareTimeline', {
-            title: '司武坤 · 宋梦婷 的婚礼请柬',
+            title: '李世权 · 李丹丹 的婚礼请柬',
             desc: '诚邀您见证我们的幸福时刻',
             link: window.location.href,
-            imgUrl: window.location.origin + '/assets/img/cover.jpg'
+            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/main.jpg'
           });
         });
         
         WeixinJSBridge.on('menu:share:timeline', function (argv) {
           WeixinJSBridge.invoke('shareTimeline', {
-            title: '司武坤 · 宋梦婷 的婚礼请柬',
+            title: '李世权 · 李丹丹 的婚礼请柬',
             desc: '诚邀您见证我们的幸福时刻',
             link: window.location.href,
-            imgUrl: window.location.origin + '/assets/img/cover.jpg'
+            imgUrl: 'https://monumental-meerkat-29776b.netlify.app' + '/assets/img/main.jpg'
           });
         });
       });
